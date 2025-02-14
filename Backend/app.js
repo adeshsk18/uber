@@ -7,6 +7,8 @@ const app = express();
 
 app.use(cors());
 
+const database = require('./db/db');
+database.connectToDB();
 
 app.get('/', (req, res) => {
     res.send('Hello World!');
